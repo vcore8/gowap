@@ -14,7 +14,7 @@ import (
 
 	"github.com/PuerkitoBio/goquery"
 	log "github.com/sirupsen/logrus"
-	scraper "github.com/unstppbl/gowap/pkg/scraper"
+	"github.com/vcore8/gowap/pkg/scraper"
 
 	jsoniter "github.com/json-iterator/go"
 	"go.zoe.im/surferua"
