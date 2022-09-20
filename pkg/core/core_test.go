@@ -322,10 +322,10 @@ func TestVersion(t *testing.T) {
 func TestParsePattern(t *testing.T) {
 	patterns := make(map[string]int)
 	//Logging output should be tested here
-	parsePatterns(patterns)
+	parsePatterns(patterns, &Config{})
 	patterns2 := make(map[string]interface{})
 	patterns2["test"] = patterns
-	parsePatterns(patterns2)
+	parsePatterns(patterns2, &Config{})
 }
 
 func TestAnalyseDom(t *testing.T) {
@@ -334,7 +334,7 @@ func TestAnalyseDom(t *testing.T) {
 	detectedApp := &detected{}
 	app.Dom = false
 	//Logging output should be tested here
-	analyzeDom(app, godoc, detectedApp)
+	analyzeDom(app, godoc, detectedApp, &Config{})
 }
 
 func TestRecursivity(t *testing.T) {
