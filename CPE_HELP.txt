@@ -1,0 +1,38 @@
+VALIDAR SYNTAX:
+nvd.nist.gov/rest/public/products/cpe/search/validate/cpe/syntax?cpeUri=cpe%3A2.3%3Ao%3Afedoraproject%3Afedora%3A*%3A*%3A*%3A*%3A*%3A*%3A*%3A*
+CONSULTAR CPE:
+nvd.nist.gov/products/cpe/search/results?namingFormat=2.3&keyword=cpe%3A2.3%3Ao%3Afedoraproject%3Afedora%3A*%3A*%3A*%3A*%3A*%3A*%3A*%3A* 
+
+
+SPECIFICATION: https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7695.pdf
+
+COMPONENTS:
+
+cpe:2.3:PART:VENDOR:PRODUCT:VERSION_NUMBER:UPDATE_NUMBER:EDITION_NUMBER:LANGUAGE_CODE:SW_EDITION:TARGET_SW:TARGET_HW:OTHER_INFO
+
+
+a. part - h = hardware, o = operational system, a = application
+b. vendor
+c. product
+d. version
+e. update
+f. edition
+g. language
+h. sw_edition
+i. target_sw
+j. target_hw
+k. other
+
+
+quando qualquer valor se aplica nos campos, fica *
+quando a informacao nao esta disponivel ou nao se aplica, fica -
+
+exemplo:
+
+
+cpe:2.3:o:fedoraproject:fedora:-:*:*:*:*:*:*:*
+
+informaçao de versao do fedora, nao disponivel
+essa notaçao eh mais dificil, o normal é só um * mesmo
+
+
