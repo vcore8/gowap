@@ -1957,7 +1957,7 @@
       "description": "ArubaCloud is a cloud company that among its products, offers a CDN.",
       "headers": {
         "X-Aruba-Cache": "",
-		     "X-Aruba2-Cache": "",
+        "X-Aruba2-Cache": ""
       },
       "icon": "",
       "website": "https://www.arubacloud.com/"
@@ -2251,9 +2251,9 @@
       },
       "headers": {
         "Server": "^Azion ",
-        "X-Azion-Cache":"",
-        "X-Azion-Error":"",
-        "X-Azion-Edge":""
+        "X-Azion-Cache": "",
+        "X-Azion-Error": "",
+        "X-Azion-Edge": ""
       },
       "icon": "Azion.svg",
       "pricing": ["poa", "payg"],
@@ -3223,10 +3223,10 @@
       "description": "CDN77 is a content delivery network (CDN).",
       "headers": {
         "Server": "^CDN77-Turbo$",
-        "X-77-Nzt":"",
-        "X-77-Nzt-Ray":"",
-        "X-77-Pop":"",
-        "X-77-Cache":""
+        "X-77-Nzt": "",
+        "X-77-Nzt-Ray": "",
+        "X-77-Pop": "",
+        "X-77-Cache": ""
       },
       "icon": "CDN77.png",
       "website": "https://www.cdn77.com"
@@ -5230,7 +5230,7 @@
       ],
       "website": "https://www.ecwid.com/"
     },
-    
+
     "EdgeCast": {
       "cats": [31],
       "description": "EdgeCast is a content delivery network (CDN) that accelerated and delivers static content to users around the world.",
@@ -7489,13 +7489,13 @@
       "dns": {
         "TXT": ["hubspotemail\\.net"]
       },
-      "headers":{
-        "x-evy-trace-virtual-host":"",
-        "x-evy-trace-listener":"",
-        "x-evy-trace-route-configuration":"",
-        "x-evy-trace-route-service-name":"",
-        "x-evy-trace-served-by-pod":"",
-        "X-HubSpot-Correlation-Id":""
+      "headers": {
+        "x-evy-trace-virtual-host": "",
+        "x-evy-trace-listener": "",
+        "x-evy-trace-route-configuration": "",
+        "x-evy-trace-route-service-name": "",
+        "x-evy-trace-served-by-pod": "",
+        "X-HubSpot-Correlation-Id": ""
       },
       "html": "<!-- Start of Async HubSpot",
       "icon": "HubSpot.png",
@@ -7703,7 +7703,7 @@
       "description": "Incapsula is a cloud-based application delivery platform. It uses a global content delivery network to provide web application security, DDoS mitigation, content caching, application delivery, load balancing and failover services.",
       "headers": {
         "X-CDN": "Incapsula",
-        "Incap-Request-ID":""
+        "Incap-Request-ID": ""
       },
       "icon": "Incapsula.png",
       "website": "http://www.incapsula.com"
@@ -9086,7 +9086,7 @@
       "description": "LiteSpeed is a high-scalability web server.",
       "headers": {
         "Server": "^LiteSpeed$",
-        "x-turbo-charged-by":""
+        "x-turbo-charged-by": ""
       },
       "icon": "LiteSpeed.svg",
       "website": "http://litespeedtech.com"
@@ -9266,16 +9266,16 @@
       "website": "https://www.locaweb.com.br"
     },
     "Localweb Mail": {
-          "cats": [85, 75],
-          "description": "Locaweb is a hosting provider and cloud services company.",
-          "html": [
-            "locaweb_logo_negative_small\\.png",
-            "program/js/\\.\\./\\.\\./plugins/LocawebUtils/js/locaweb_utils\\.js",
-            "\\<title\\>Webmail Seguro\\s\\-\\sLocaweb\\<\/title\\>"
-          ],
-          "implies": "Localweb",
-          "icon": "",
-          "website": "https://www.locaweb.com.br"
+      "cats": [85, 75],
+      "description": "Locaweb is a hosting provider and cloud services company.",
+      "html": [
+        "locaweb_logo_negative_small\\.png",
+        "program/js/\\.\\./\\.\\./plugins/LocawebUtils/js/locaweb_utils\\.js",
+        "\\<title\\>Webmail Seguro\\s\\-\\sLocaweb\\</title\\>"
+      ],
+      "implies": "Localweb",
+      "icon": "",
+      "website": "https://www.locaweb.com.br"
     },
     "LocalFocus": {
       "cats": [25],
@@ -11443,8 +11443,8 @@
       "cats": [16, 84],
       "description": "Oracle Cloud WAF.",
       "headers": {
-        "Zen-Host":"",
-		    "X-Zen-Fury":""
+        "Zen-Host": "",
+        "X-Zen-Fury": ""
       },
       "icon": "",
       "website": "https://cloud.oracle.com"
@@ -15472,7 +15472,7 @@
       "description": "StackPath is a cloud computing and services provider.",
       "headers": {
         "x-backend-server": "hosting\\.stackcp\\.net$",
-        "X-HW":"",
+        "X-HW": "",
         "x-provided-by": "^StackCDN(?: ([\\d.]+))?\\;version:\\1"
       },
       "icon": "StackPath.svg",
@@ -15932,8 +15932,8 @@
     "Terra CDN": {
       "cats": [31],
       "headers": {
-        "X-Cdnterra":"",
-		    "X-Mt-Cache":""
+        "X-Cdnterra": "",
+        "X-Mt-Cache": ""
       },
       "description": "Terra is a telefonica brand and technology company. Terra CDN is a Terra-own CDN and B2B CDN service.",
       "icon": "",
@@ -17026,6 +17026,13 @@
         "VtexWorkspace": "",
         "vtex_session": ""
       },
+      "html": [
+        "vtex-commerce",
+        "io.vtex.com",
+        "vtexassets.com",
+        "workspace=master",
+        "<meta name=\"vtex-version\" content=\"([0-9.]+)\\;version:\\1"
+      ],
       "description": "VTEX is an ecommerce software that manages multiple online stores.",
       "headers": {
         "Server": "^VTEX IO$",
@@ -17036,6 +17043,109 @@
       "saas": true,
       "website": "https://vtex.com/"
     },
+    "VTEX provider vtex.admin-graphql-ide": {
+      "cats": [5],
+      "html": [
+        "provider\":\"vtex\\.admin-graphql-ide@(\\d[^\"]+)\\;version:\\1"
+      ],
+      "implies": "VTEX",
+      "cpe": "cpe:2.3:a:vtex:admin-graphql-ide:VERSION_NUMBER:UPDATE_NUMBER:EDITION_NUMBER:LANGUAGE_CODE:SW_EDITION:TARGET_SW:TARGET_HW:OTHER_INFO",
+      "description": "VTEX is an ecommerce software that manages multiple online stores.",
+      "icon": "",
+      "website": "https://vtex.com/"
+    },
+    "VTEX provider vtex.admin-graphql": {
+      "cats": [5],
+      "html": ["provider\":\"vtex.admin-graphql@(d[^\"]+)\\;version:\\1"],
+      "implies": "VTEX",
+      "cpe": "cpe:2.3:a:vtex:admin-graphql:VERSION_NUMBER:UPDATE_NUMBER:EDITION_NUMBER:LANGUAGE_CODE:SW_EDITION:TARGET_SW:TARGET_HW:OTHER_INFO",
+      "description": "VTEX is an ecommerce software that manages multiple online stores.",
+      "icon": "",
+      "website": "https://vtex.com/"
+    },
+    "VTEX provider vtex.admin-cms-graphql-rc": {
+      "cats": [5],
+      "html": [
+        "provider\":\"vtex\\.admin-cms-graphql-rc@(\\d[^\"]+)\\;version:\\1"
+      ],
+      "implies": "VTEX",
+      "cpe": "cpe:2.3:a:vtex:admin-cms-graphql-rc:VERSION_NUMBER:UPDATE_NUMBER:EDITION_NUMBER:LANGUAGE_CODE:SW_EDITION:TARGET_SW:TARGET_HW:OTHER_INFO",
+      "description": "VTEX is an ecommerce software that manages multiple online stores.",
+      "icon": "",
+      "website": "https://vtex.com/"
+    },
+    "VTEX provider vtex.admin-pricing-settings-graphql": {
+      "cats": [5],
+      "html": [
+        "provider\":\"vtex\\.admin-pricing-settings-graphql@(\\d[^\"]+)\\;version:\\1"
+      ],
+      "implies": "VTEX",
+      "cpe": "cpe:2.3:a:vtex:admin-pricing-settings-graphql:VERSION_NUMBER:UPDATE_NUMBER:EDITION_NUMBER:LANGUAGE_CODE:SW_EDITION:TARGET_SW:TARGET_HW:OTHER_INFO",
+      "description": "VTEX is an ecommerce software that manages multiple online stores.",
+      "icon": "",
+      "website": "https://vtex.com/"
+    },
+    "VTEX provider vtex.apps-graphql": {
+      "cats": [5],
+      "html": ["provider\":\"vtex\\.apps-graphql@(\\d[^\"]+)\\;version:\\1"],
+      "implies": "VTEX",
+      "cpe": "cpe:2.3:a:vtex:apps-graphql:VERSION_NUMBER:UPDATE_NUMBER:EDITION_NUMBER:LANGUAGE_CODE:SW_EDITION:TARGET_SW:TARGET_HW:OTHER_INFO",
+      "description": "VTEX is an ecommerce software that manages multiple online stores.",
+      "icon": "",
+      "website": "https://vtex.com/"
+    },
+    "VTEX provider vtex.catalog-graphql": {
+      "cats": [5],
+      "html": ["provider\":\"vtex\\.catalog-graphql@(\\d[^\"]+)\\;version:\\1"],
+      "implies": "VTEX",
+      "cpe": "cpe:2.3:a:vtex:catalog-graphql:VERSION_NUMBER:UPDATE_NUMBER:EDITION_NUMBER:LANGUAGE_CODE:SW_EDITION:TARGET_SW:TARGET_HW:OTHER_INFO",
+      "description": "VTEX is an ecommerce software that manages multiple online stores.",
+      "icon": "",
+      "website": "https://vtex.com/"
+    },
+    "VTEX provider vtex.file-manager-graphql": {
+      "cats": [5],
+      "html": [
+        "provider\":\"vtex\\.file-manager-graphql@(\\d[^\"]+)\\;version:\\1"
+      ],
+      "implies": "VTEX",
+      "cpe": "cpe:2.3:a:vtex:file-manager-graphql:VERSION_NUMBER:UPDATE_NUMBER:EDITION_NUMBER:LANGUAGE_CODE:SW_EDITION:TARGET_SW:TARGET_HW:OTHER_INFO",
+      "description": "VTEX is an ecommerce software that manages multiple online stores.",
+      "icon": "",
+      "website": "https://vtex.com/"
+    },
+    "VTEX provider vtex.pagespeed-graphql": {
+      "cats": [5],
+      "html": [
+        "provider\":\"vtex\\.pagespeed-graphql@(\\d[^\"]+)\\;version:\\1"
+      ],
+      "implies": "VTEX",
+      "cpe": "cpe:2.3:a:vtex:pagespeed-graphql:VERSION_NUMBER:UPDATE_NUMBER:EDITION_NUMBER:LANGUAGE_CODE:SW_EDITION:TARGET_SW:TARGET_HW:OTHER_INFO",
+      "description": "VTEX is an ecommerce software that manages multiple online stores.",
+      "icon": "",
+      "website": "https://vtex.com/"
+    },
+    "VTEX provider vtex.subscriptions-graphql": {
+      "cats": [5],
+      "html": [
+        "provider\":\"vtex\\.subscriptions-graphql@(\\d[^\"]+)\\;version:\\1"
+      ],
+      "implies": "VTEX",
+      "cpe": "cpe:2.3:a:vtex:subscriptions-graphql:VERSION_NUMBER:UPDATE_NUMBER:EDITION_NUMBER:LANGUAGE_CODE:SW_EDITION:TARGET_SW:TARGET_HW:OTHER_INFO",
+      "description": "VTEX is an ecommerce software that manages multiple online stores.",
+      "icon": "",
+      "website": "https://vtex.com/"
+    },
+    "VTEX provider vtex.tenant-graphql": {
+      "cats": [5],
+      "html": ["provider\":\"vtex\\.tenant-graphql@(\\d[^\"]+)\\;version:\\1"],
+      "implies": "VTEX",
+      "cpe": "cpe:2.3:a:vtex:tenant-graphql:VERSION_NUMBER:UPDATE_NUMBER:EDITION_NUMBER:LANGUAGE_CODE:SW_EDITION:TARGET_SW:TARGET_HW:OTHER_INFO",
+      "description": "VTEX is an ecommerce software that manages multiple online stores.",
+      "icon": "",
+      "website": "https://vtex.com/"
+    },
+
     "VWO": {
       "cats": [10, 74],
       "description": "VWO is a website testing and conversion optimisation platform.",
@@ -17149,13 +17259,13 @@
       "headers": {
         "x-vercel-cache": "",
         "x-vercel-id": "",
-        "X-Vercel-forwarded-for",
-        "x-vercel-deployment-url",
-        "x-vercel-ip-country",
-        "x-vercel-ip-country-region",
-        "x-vercel-ip-city",
-        "x-vercel-ip-latitude",
-        "x-vercel-ip-timezone",
+        "X-Vercel-forwarded-for": "",
+        "x-vercel-deployment-url": "",
+        "x-vercel-ip-country": "",
+        "x-vercel-ip-country-region": "",
+        "x-vercel-ip-city": "",
+        "x-vercel-ip-latitude": "",
+        "x-vercel-ip-timezone": ""
       },
       "icon": "vercel.svg",
       "website": "https://vercel.com"
@@ -19248,8 +19358,7 @@
       "implies": "Perl",
       "website": "http://metacpan.org/pod/HTTP::Daemon"
     },
-    
-    
+
     "lighttpd": {
       "cats": [22],
       "headers": {
