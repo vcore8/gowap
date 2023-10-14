@@ -620,7 +620,31 @@ func addApp(app *application, detectedApplications *detected, version string, co
 			(*detectedApplications).Apps[app.Name].technology.Confidence = confidence
 		}
 	}
+
+	tech := (*detectedApplications).Apps[app.Name].technology
+	(*detectedApplications).Apps[app.Name].technology.CPE = normalizeCpe(tech)
+
 	detectedApplications.Mu.Unlock()
+}
+
+func normalizeCpe(technology technology) (cpe string) {
+	all := "*"
+	version := technology.Version
+	if version == "" {
+		version = all
+	}
+
+	cpe = technology.CPE
+	cpe = strings.ReplaceAll(cpe, "VERSION_NUMBER", all)
+	cpe = strings.ReplaceAll(cpe, "UPDATE_NUMBER", all)
+	cpe = strings.ReplaceAll(cpe, "EDITION_NUMBER", all)
+	cpe = strings.ReplaceAll(cpe, "LANGUAGE_CODE", all)
+	cpe = strings.ReplaceAll(cpe, "SW_EDITION", all)
+	cpe = strings.ReplaceAll(cpe, "TARGET_SW", all)
+	cpe = strings.ReplaceAll(cpe, "TARGET_HW", all)
+	cpe = strings.ReplaceAll(cpe, "OTHER_INFO", all)
+
+	return
 }
 
 // detectVersion tries to extract version from value when app detected
