@@ -622,29 +622,28 @@ func addApp(app *application, detectedApplications *detected, version string, co
 	}
 
 	tech := (*detectedApplications).Apps[app.Name].technology
-	(*detectedApplications).Apps[app.Name].technology.CPE = normalizeCpe(tech)
+	normalizeCpe(&tech)
+
+	(*detectedApplications).Apps[app.Name].technology = tech
 
 	detectedApplications.Mu.Unlock()
 }
 
-func normalizeCpe(technology technology) (cpe string) {
+func normalizeCpe(tech *technology) {
 	all := "*"
-	version := technology.Version
+	version := tech.Version
 	if version == "" {
 		version = all
 	}
 
-	cpe = technology.CPE
-	cpe = strings.ReplaceAll(cpe, "VERSION_NUMBER", all)
-	cpe = strings.ReplaceAll(cpe, "UPDATE_NUMBER", all)
-	cpe = strings.ReplaceAll(cpe, "EDITION_NUMBER", all)
-	cpe = strings.ReplaceAll(cpe, "LANGUAGE_CODE", all)
-	cpe = strings.ReplaceAll(cpe, "SW_EDITION", all)
-	cpe = strings.ReplaceAll(cpe, "TARGET_SW", all)
-	cpe = strings.ReplaceAll(cpe, "TARGET_HW", all)
-	cpe = strings.ReplaceAll(cpe, "OTHER_INFO", all)
-
-	return
+	tech.CPE = strings.ReplaceAll(tech.CPE, "VERSION_NUMBER", all)
+	tech.CPE = strings.ReplaceAll(tech.CPE, "UPDATE_NUMBER", all)
+	tech.CPE = strings.ReplaceAll(tech.CPE, "EDITION_NUMBER", all)
+	tech.CPE = strings.ReplaceAll(tech.CPE, "LANGUAGE_CODE", all)
+	tech.CPE = strings.ReplaceAll(tech.CPE, "SW_EDITION", all)
+	tech.CPE = strings.ReplaceAll(tech.CPE, "TARGET_SW", all)
+	tech.CPE = strings.ReplaceAll(tech.CPE, "TARGET_HW", all)
+	tech.CPE = strings.ReplaceAll(tech.CPE, "OTHER_INFO", all)
 }
 
 // detectVersion tries to extract version from value when app detected
@@ -771,7 +770,9 @@ func resolveImplies(apps *map[string]*application, detected *map[string]*resultA
 		for _, implied := range v {
 			app, ok := (*apps)[implied.str]
 			if _, ok2 := (*detected)[implied.str]; ok && !ok2 {
-				resApp := &resultApp{technology{app.Slug, app.Name, implied.confidence, implied.version, app.Icon, app.Website, app.CPE, app.Categories}, app.Excludes, app.Implies}
+				tech := technology{app.Slug, app.Name, implied.confidence, implied.version, app.Icon, app.Website, app.CPE, app.Categories}
+				normalizeCpe(&tech)
+				resApp := &resultApp{tech, app.Excludes, app.Implies}
 				(*detected)[implied.str] = resApp
 				if app.Implies != nil {
 					resolveImplies(apps, detected, app.Implies, cfg)
