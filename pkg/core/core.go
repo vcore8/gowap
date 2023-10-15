@@ -636,7 +636,7 @@ func normalizeCpe(tech *technology) {
 		version = all
 	}
 
-	tech.CPE = strings.ReplaceAll(tech.CPE, "VERSION_NUMBER", all)
+	tech.CPE = strings.ReplaceAll(tech.CPE, "VERSION_NUMBER", version)
 	tech.CPE = strings.ReplaceAll(tech.CPE, "UPDATE_NUMBER", all)
 	tech.CPE = strings.ReplaceAll(tech.CPE, "EDITION_NUMBER", all)
 	tech.CPE = strings.ReplaceAll(tech.CPE, "LANGUAGE_CODE", all)
