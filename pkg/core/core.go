@@ -805,8 +805,13 @@ func getLinksSlice(doc *goquery.Document, currentURL string) *map[string]struct{
 
 	doc.Find("body a").Each(func(index int, item *goquery.Selection) {
 		rawLink, _ := item.Attr("href")
+
 		escaped := strings.ReplaceAll(strings.ReplaceAll(strings.ReplaceAll(rawLink, "\t", ""), "\n", ""), " ", "")
-		parsedLink, _ := url.Parse(escaped)
+		parsedLink, err := url.Parse(escaped)
+		if err != nil {
+			return
+		}
+
 		if parsedLink.Scheme == "" {
 			parsedLink.Scheme = parsedCurrentURL.Scheme
 		}
